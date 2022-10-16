@@ -1,5 +1,7 @@
 
 import './App.css';
+import Countries from './components/Countries';
+
 import Number from './components/Number';
 import Skills from './components/Skills';
 
@@ -13,6 +15,14 @@ function App() {
     ['React', 8],
   ]
 
+  const countries = [
+    { name: 'Finland', city: 'Helsinki' },
+    { name: 'Sweden', city: 'Stockholm' },
+    { name: 'Denmark', city: 'Copenhagen' },
+    { name: 'Norway', city: 'Oslo' },
+    { name: 'Iceland', city: 'Reykjavík' },
+  ]
+
   return (
     <div className="App">
      <h1>Numbers List</h1>
@@ -22,6 +32,10 @@ function App() {
      </ul>
 
      <Skills skills={skills}/>
+
+     <Countries countries={countries}/>
+
+
 
     </div>
   );
