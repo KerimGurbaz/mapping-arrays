@@ -13,7 +13,7 @@ const Number = ({ numbers }) => {
   };
 
   return (
-    <Container className="bg-warning display-5">
+    <Container className="display-5 p-2" style={{ background: "#900020" }}>
       <Row>
         <Col style={containerStyle}>
           {numbers.map((number) => {
@@ -24,7 +24,7 @@ const Number = ({ numbers }) => {
                   md={2}
                   lg={1}
                   className="p-2 m-1"
-                  style={{ backgroundColor: "green" }}
+                  style={{ backgroundColor: "#A0E7E5" }}
                 >
                   {number}
                 </Col>
@@ -36,7 +36,7 @@ const Number = ({ numbers }) => {
                   sm={3}
                   md={2}
                   lg={1}
-                  style={{ backgroundColor: "yellow" }}
+                  style={{ backgroundColor: "#B4F8C8" }}
                 >
                   {number}
                 </Col>
@@ -55,7 +55,7 @@ const Number = ({ numbers }) => {
                     sm={3}
                     md={2}
                     lg={1}
-                    style={{ backgroundColor: "red" }}
+                    style={{ backgroundColor: "#FFAEBC" }}
                   >
                     {number}
                   </Col>
@@ -68,7 +68,7 @@ const Number = ({ numbers }) => {
                     sm={3}
                     md={2}
                     lg={1}
-                    style={{ backgroundColor: "green" }}
+                    style={{ backgroundColor: "#A0E7E5" }}
                   >
                     {number}
                   </Col>
@@ -82,7 +82,7 @@ const Number = ({ numbers }) => {
                     sm={3}
                     md={2}
                     lg={1}
-                    style={{ backgroundColor: "yellow" }}
+                    style={{ backgroundColor: "#B4F8C8" }}
                   >
                     {number}
                   </Col>

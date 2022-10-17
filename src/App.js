@@ -3,6 +3,7 @@ import './App.css';
 import Countries from './components/Countries';
 
 import Number from './components/Number';
+import Button from './components/NumGenerator/Button';
 import NumberGenerator from './components/NumGenerator/NumberGenerator';
 import Skills from './components/Skills';
 
@@ -28,6 +29,7 @@ function App() {
     <div className="App">
      <h1>30 Days Of React </h1>
      <h3>Number Generator</h3>
+     <Button/>
      <NumberGenerator/>
 {/* 
      <ul>
