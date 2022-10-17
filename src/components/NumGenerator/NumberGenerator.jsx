@@ -4,10 +4,15 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 
-const NumberGenerator = () => {
+const NumberGenerator = ({ value }) => {
   let num = 0;
+  console.log(typeof value);
+
+  let x = +value;
+  console.log(typeof x);
+
   const numbers = [];
-  for (let i = 0; i < 32; i++) {
+  for (let i = 0; i <= x; i++) {
     num = i;
     numbers.push(num);
   }

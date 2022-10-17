@@ -1,7 +1,7 @@
 
 import './App.css';
 import Countries from './components/Countries';
-
+import { useState } from 'react';
 import Number from './components/Number';
 import Button from './components/NumGenerator/Button';
 import NumberGenerator from './components/NumGenerator/NumberGenerator';
@@ -25,12 +25,15 @@ function App() {
     { name: 'Iceland', city: 'Reykjavík' },
   ]
 
+  const [value, setValue] = useState(39);
+
+
   return (
     <div className="App">
      <h1>30 Days Of React </h1>
      <h3>Number Generator</h3>
-     <Button/>
-     <NumberGenerator/>
+     <Button setValue={setValue} value={value}/>
+     <NumberGenerator value={value}/>
 {/* 
      <ul>
      <Number numbers={numbers}/>

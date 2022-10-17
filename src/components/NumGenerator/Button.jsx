@@ -1,21 +1,25 @@
 import React from "react";
 import { useState } from "react";
 
-const Button = () => {
-  const [value, setValue] = useState("");
+const Button = ({ setValue, value }) => {
+  const [click, setClick] = useState("");
 
-  const handleValue = (e) => {
-    console.log(e.target.value);
-    setValue(e.target.value);
-  };
+  // const handleValue = (e) => {
+  //   console.log(e.target.value);
+  //   setValue(e.target.value);
+  // };
 
-  const handleClick = () => {
-    handleValue();
-  };
+  // const handleClick = () => {
+  //   handleValue();
+  // };
+  console.log(click, value);
+  console.log("click :>> ", click);
+  console.log("value :>> ", value);
+
   return (
     <div className="d-flex justify-content-center my-3">
-      <input type="number" value={value} onChange={handleValue} />
-      <button className="btn btn-danger mx-2" onClick={handleClick}>
+      <input type="number" onChange={(e) => setClick(e.target.value)} />
+      <button onClick={() => setValue(click)} className="btn btn-danger mx-2">
         Click me
       </button>
     </div>

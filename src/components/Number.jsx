@@ -4,8 +4,6 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 
 const Number = ({ numbers }) => {
-  console.log(numbers);
-
   const containerStyle = {
     display: "flex",
     flexWrap: "wrap",
@@ -16,10 +14,11 @@ const Number = ({ numbers }) => {
     <Container className="display-5 p-2" style={{ background: "#900020" }}>
       <Row>
         <Col style={containerStyle}>
-          {numbers.map((number) => {
+          {numbers.map((number, index) => {
             if (number === 0) {
               return (
                 <Col
+                  key={index}
                   sm={3}
                   md={2}
                   lg={1}
@@ -32,6 +31,7 @@ const Number = ({ numbers }) => {
             } else if (number === 1) {
               return (
                 <Col
+                  key={index}
                   className="m-1"
                   sm={3}
                   md={2}
@@ -51,6 +51,7 @@ const Number = ({ numbers }) => {
               if (isPrime(number) === prime) {
                 return (
                   <Col
+                    key={index}
                     className="m-1"
                     sm={3}
                     md={2}
@@ -64,6 +65,7 @@ const Number = ({ numbers }) => {
               if (isPrime(number) !== prime && number % 2 === 0) {
                 return (
                   <Col
+                    key={index}
                     className="m-1"
                     sm={3}
                     md={2}
@@ -78,6 +80,7 @@ const Number = ({ numbers }) => {
               if (isPrime(number) !== prime && number % 2 !== 0) {
                 return (
                   <Col
+                    key={index}
                     className="m-1"
                     sm={3}
                     md={2}
