@@ -1,21 +1,25 @@
 import React from "react";
+import Number from "../Number";
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
 
 const NumberGenerator = () => {
-  let events = [];
-  let odds = [];
-  for (let i = 0; i < 10; i++) {
-    if (i % 2) {
-      odds.push(i);
-    } else {
-      events.push(i);
-    }
+  let num = 0;
+  const numbers = [];
+  for (let i = 0; i < 32; i++) {
+    num = i;
+    numbers.push(num);
   }
-  console.log(odds, events);
+
   return (
-    <div>
-      <li>{odds}</li>
-      <li>{events}</li>
-    </div>
+    <Container>
+      <Row>
+        <Col>
+          <Number numbers={numbers} />
+        </Col>
+      </Row>
+    </Container>
   );
 };
 

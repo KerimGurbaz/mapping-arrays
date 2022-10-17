@@ -28,7 +28,7 @@ function App() {
     <div className="App">
      <h1>30 Days Of React </h1>
      <h3>Number Generator</h3>
-
+     <NumberGenerator/>
 {/* 
      <ul>
      <Number numbers={numbers}/>
@@ -38,7 +38,7 @@ function App() {
 
      <Countries countries={countries}/> */}
 
-     <NumberGenerator/>
+    
 
 
 
