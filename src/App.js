@@ -6,6 +6,7 @@ import Number from './components/Number';
 import Button from './components/NumGenerator/Button';
 import NumberGenerator from './components/NumGenerator/NumberGenerator';
 import Skills from './components/Skills';
+import Description from './Description';
 
 function App() {
   const numbers = [1, 2, 3, 4, 5];
@@ -25,7 +26,7 @@ function App() {
     { name: 'Iceland', city: 'Reykjavík' },
   ]
 
-  const [value, setValue] = useState(39);
+  const [value, setValue] = useState(32);
 
 
   return (
@@ -34,6 +35,7 @@ function App() {
      <h3>Number Generator</h3>
      <Button setValue={setValue} value={value}/>
      <NumberGenerator value={value}/>
+     <Description/>
 {/* 
      <ul>
      <Number numbers={numbers}/>

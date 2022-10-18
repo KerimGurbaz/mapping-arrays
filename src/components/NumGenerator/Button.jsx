@@ -8,8 +8,13 @@ const Button = ({ setValue, value }) => {
 
   return (
     <div className="d-flex justify-content-center my-3">
-      <input type="number" onChange={(e) => setClick(e.target.value)} />
-      <button onClick={() => setValue(click)} className="btn btn-danger mx-2">
+      <input
+        type="number"
+        onChange={(e) => {
+          setClick(e.target.value);
+        }}
+      />
+      <button onClick={() => setValue(click)} className="btn btn-danger mx-2 ">
         Click me
       </button>
     </div>
